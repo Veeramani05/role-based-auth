@@ -1,5 +1,5 @@
 var express = require('express');
-const ev = require('express-validator');
+const ev = require('express-validation');
 
 const { loginValidator, signUpValidator } = require('./../validators')
 const { login, signUp } = require('./../controllers');
@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 });
 
 
-router.post('/login', ev(loginValidator), login);
-router.post('/signUp', ev(signUpValidator), signUp);
+router.post('/login', login);
+router.post('/signUp', signUp);
 
 module.exports = router;

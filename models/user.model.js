@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const { user } = require("./../helpers/role")
 const signUpSchema = new mongoose.Schema({
-  name: String,
+  name: {
+    type: String,
+    required: true,
+  },
   email: {
     type: String,
     required: true,
