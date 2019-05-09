@@ -7,16 +7,6 @@ const loginValidator = {
   }
 }
 
-const signUpValidator = {
-  body: {
-    name: Joi.string().required(),
-    email: Joi.string().required().email(),
-    password: Joi.string().required(),
-    gender: Joi.string().required(),
-  }
-}
-
 module.exports = {
-  loginValidator,
-  signUpValidator
+  loginValidator
 }
