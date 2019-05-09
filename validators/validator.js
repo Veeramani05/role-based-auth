@@ -3,7 +3,7 @@ const Joi = require('joi')
 const loginValidator = {
   body: {
     email: Joi.string().email().required(),
-    password: Joi.string().email().required(),
+    password: Joi.string().required(),
   }
 }
 
